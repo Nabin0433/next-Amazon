@@ -11,7 +11,7 @@ const app = !admin.apps.length
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const key = "whsec_K1TEF4NGo0m0jkkTzkW54YfuW9KLNTAZ";
+const key = STRIPE_SIGNING_SECRET;
 
 const fullfillOrder = async (session) => {
   return await app
