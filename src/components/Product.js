@@ -15,7 +15,7 @@ const Product = ({ Products }) => {
     dispath(addToBasket(Products));
   };
   return (
-    <div className="relative flex flex-col m-5 bg-white z-30 p-10 hover:shadow-lg">
+    <div className="relative flex flex-col m-5 bg-white z-30 p-10 hover:shadow-lg hover:scale-105 transform hover:rounded-t-lg">
       <p className="absolute top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
@@ -25,7 +25,7 @@ const Product = ({ Products }) => {
         height={200}
         width={200}
         objectFit="contain"
-        className="cursor-pointer"
+        className="cursor-pointer hover:scale-105 transform "
       />
       <h4 className="my-3">{title}</h4>
       <p className="text-xs my-2 line-clamp-2">{description}</p>

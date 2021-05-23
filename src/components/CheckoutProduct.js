@@ -2,6 +2,8 @@ import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
+import checkout from "../payments/Khalti";
+
 import { removeFromBasket } from "../redux/reduser";
 
 const CheckoutProduct = ({ Product }) => {
@@ -44,7 +46,12 @@ const CheckoutProduct = ({ Product }) => {
         )}
       </div>
       <div className="flex flex-col space-y-2 my-auto justify-self-auto">
-        <button className="button">Buy Now</button>
+        <button
+          onClick={() => checkout.show({ amount: price * 100 })}
+          className="button"
+        >
+          Buy Now
+        </button>
         <button onClick={removeItemFromBasket} className="button">
           Remove From Basket
         </button>
